@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:be497dc77565efd6ef2dcaa0e891d6c4$ -->
+<TextureAtlas imagePath="entities.png">
+    <SubTexture name="cell" x="2" y="2" width="64" height="64"/>
+</TextureAtlas>
