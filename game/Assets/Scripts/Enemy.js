@@ -10,7 +10,7 @@ function Start () {
 
 function Update () {
   transform.localScale = Vector3(size, size, 1);
-  
+
   if(player.size < size) {
     seek(player);
   } else {

@@ -13,7 +13,8 @@ private var bubbleTrail : GameObject;
 private var sparkleTrail : GameObject;
 private var cameraObject : GameObject;
 
-public var direction : String;
+private var verticalDirection : String;
+private var horizontalDirection : String;
 
 function Start()  {
     bubbleTrail  = GameObject.Find("SparkleParticles");
@@ -29,7 +30,7 @@ function OnCollisionStay(collisionInfo : Collision) {
     	  if(enemy.size < size) {
     	    enemy.size -= speed * Time.deltaTime;
     	  }
-    	  if(enemy.size <= 0) {
+    	  if(enemy.size <= 0.5) {
     	    Destroy(object);
     	  }
     	}
@@ -55,52 +56,68 @@ function Update() {
 	  transform.position.x += speed * Time.deltaTime;
 	  bubbleTrail.particleEmitter.emit = true;
 	  sparkleTrail.particleEmitter.emit = true;
-	  direction = "right";
-	}
-	
-	if(direction == "right") {
-	  if(transform.eulerAngles.z > 270 || transform.eulerAngles.z < 120.5) {
-	    transform.rotation.z -= speed / 2 * Time.deltaTime;
-	  } else {
-	    transform.eulerAngles = Vector3(0, 0, -90);
-	  }
-	}
-	
-	if (Input.GetKey("a") || Input.GetKey("left")) {
+	  horizontalDirection = "right";
+	} else if (Input.GetKey("a") || Input.GetKey("left")) {
 	  transform.position.x -= speed * Time.deltaTime;
 	  bubbleTrail.particleEmitter.emit = true;
 	  sparkleTrail.particleEmitter.emit = true;
-	  direction = "left";
-	}
-	
-	if(direction == "left") {
-	  if(transform.eulerAngles.z < 90 || transform.eulerAngles.z >= 270) {
-	    transform.rotation.z += speed / 2 * Time.deltaTime;
-	  } else {
-	    transform.eulerAngles = Vector3(0, 0, 90);
-	  }
+	  horizontalDirection = "left";
+	} else {
+	  horizontalDirection = null;
 	}
 	
 	if (Input.GetKey("w") || Input.GetKey("up")) {
 	  transform.position.y += speed * Time.deltaTime;
 	  bubbleTrail.particleEmitter.emit = true;
 	  sparkleTrail.particleEmitter.emit = true;
-	  direction = "up";
-	}
-	
-	if(direction == "up") {
-		transform.rotation.z = 0;
-	}
-	
-	if (Input.GetKey("s") || Input.GetKey("down")) {
+	  verticalDirection = "up";
+	} else if (Input.GetKey("s") || Input.GetKey("down")) {
 	  transform.position.y -= speed * Time.deltaTime;
 	  bubbleTrail.particleEmitter.emit = true;
 	  sparkleTrail.particleEmitter.emit = true;
-	  direction = "down";
+	  verticalDirection = "down";
+	} else {
+	  verticalDirection = null;
 	}
 	
-	if(direction == "down") {
-		transform.rotation.z = 180;
+	if(!verticalDirection) {
+		if(horizontalDirection == "right") {
+		  iTween.RotateTo(gameObject, Vector3(0, 0, -90), 0.5);
+		}
+	
+		if(horizontalDirection == "left") {
+		  iTween.RotateTo(gameObject, Vector3(0, 0, 90), 0.5);
+		}
+	}
+
+	if(!horizontalDirection) {
+		if(verticalDirection == "up") {
+		  iTween.RotateTo(gameObject, Vector3(0, 0, 0), 0.5);
+		}
+	
+		if(verticalDirection == "down") {
+		  iTween.RotateTo(gameObject, Vector3(0, 0, 180), 0.5);
+		}
+	}
+	
+	if(horizontalDirection && verticalDirection) {
+	  if(verticalDirection == "up") {
+	    if(horizontalDirection == "right") {
+	      iTween.RotateTo(gameObject, Vector3(0, 0, -45), 0.5);
+	    } else {
+	      iTween.RotateTo(gameObject, Vector3(0, 0, 45), 0.5);
+	    }
+	  }
+	  
+	  if(verticalDirection == "down") {
+	    if(horizontalDirection == "right") {
+	      iTween.RotateTo(gameObject, Vector3(0, 0, -135), 0.5);
+	    } else {
+	      iTween.RotateTo(gameObject, Vector3(0, 0, 135), 0.5);
+	    }
+
+	  }
+
 	}
 	
 	cameraObject.transform.rotation.z = 0; // Make Sure Camera is Fixed

@@ -73,6 +73,7 @@
      <None Include="Assets\Textures\entities.xml" />
      <None Include="Assets\Orthello\-Read-Me.txt" />
      <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\Plugins\iTweenEditor\README.txt" />
      <None Include="Assets\AstarPathfindingEditor\Editor\EditorAssets\Materials\Navmesh.shader" />
      <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
