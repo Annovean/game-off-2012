@@ -13,5 +13,5 @@ this URL: game-off-2012.herokuapp.com
 
 ### Created By
 
-* [@keoven] Nelvin Driz
-* [@gilliandugay] Gillian Dugay
+* [@keoven](https://github.com/keoven) Nelvin Driz
+* [@gilliandugay](http://github.com/gilliandugay) Gillian Dugay
