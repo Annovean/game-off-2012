@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://texturepacker.com-->
-<!-- $TexturePacker:SmartUpdate:2038eb9cb57775c3ce33e455261978b1$ -->
+<!-- $TexturePacker:SmartUpdate:3b15a8ababe04950a91e9f99e126da31$ -->
 <TextureAtlas imagePath="entities.png">
-    <SubTexture name="arrow" x="68" y="2" width="10" height="5"/>
-    <SubTexture name="cell" x="2" y="2" width="64" height="64"/>
+    <SubTexture name="arrow" x="516" y="2" width="80" height="41"/>
+    <SubTexture name="cell" x="2" y="2" width="512" height="512"/>
 </TextureAtlas>
