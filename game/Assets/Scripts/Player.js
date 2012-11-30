@@ -29,9 +29,11 @@ function OnCollisionStay(collisionInfo : Collision) {
     	  var enemy : Enemy = object.GetComponent(Enemy);
     	  if(enemy.size < size) {
     	    enemy.size -= speed * Time.deltaTime;
+    	    size += ( speed * Time.deltaTime ) / 2;
     	  }
     	  if(enemy.size <= 0.5) {
     	    Destroy(object);
+    	    score++;
     	  }
     	}
     }

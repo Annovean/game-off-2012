@@ -11,7 +11,11 @@ function Start () {
 
 function Update () {
   if(firstUpdate) {
+    var _size : int = Random.Range(1, 3);
     transform.position = Vector3(Random.Range(-49, 49), Random.Range(-49, 49), 0);
+    transform.localScale = Vector3(_size, _size, 0);
+    size = _size;
+    speed = 3f / size;
     firstUpdate = false;
   }
   
