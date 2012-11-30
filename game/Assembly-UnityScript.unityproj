@@ -58,7 +58,7 @@
      <Compile Include="Assets\Orthello\Examples\7 - Tweening\JSExample7.js" />
      <Compile Include="Assets\Orthello\Examples\7 - Tweening\JSStar7_1.js" />
      <Compile Include="Assets\Orthello\Examples\7 - Tweening\JSStar7_2.js" />
-     <Compile Include="Assets\Scripts\HomingAI.js" />
+     <Compile Include="Assets\Scripts\Enemy.js" />
      <Compile Include="Assets\Scripts\Player.js" />
      <None Include="Assets\AstarPathfindingEditor\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\Orthello\Examples\0 - Simple Examples\TextSprites\lorem.txt" />
