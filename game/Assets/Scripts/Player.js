@@ -124,7 +124,8 @@ function Update() {
 }
 
 function OnGUI()  {
+    var enemies = GameObject.FindGameObjectsWithTag("Enemy");
     //GUI.Box( Rect( (Screen.width / 2) - 140, 5, 280, 25 ), "Mouse Position = " + Input.mousePosition );
-    GUI.Box( Rect( (Screen.width / 2) - 70, Screen.height - 30, 140, 25 ), "Enemies: " + 0 + " | Score:" + score );
+    GUI.Box( Rect( (Screen.width / 2) - 70, Screen.height - 30, 140, 25 ), "Enemies: " + enemies.length + " | Score:" + score );
     //GUI.Box( Rect( 5, (Screen.height / 2) - 12, 140, 25 ), "Rotation: " + transform.localEulerAngles.z  );
 }
