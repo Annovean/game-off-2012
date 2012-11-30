@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="entities.svg">
+   sodipodi:docname="entities.svg"
+   inkscape:export-filename="/Users/nelvindriz/Workspace/Annovean/game-off-2012/game/Assets/Textures/entities/cell.png"
+   inkscape:export-xdpi="38.769234"
+   inkscape:export-ydpi="38.769234">
   <defs
      id="defs4">
     <linearGradient
@@ -76,11 +79,11 @@
      pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="67.227667"
-     inkscape:cy="1008.3437"
+     inkscape:cx="227.42767"
+     inkscape:cy="933.44699"
      inkscape:document-units="px"
      inkscape:current-layer="g3779"
      showgrid="false"
@@ -113,7 +116,10 @@
        inkscape:export-xdpi="38.769234"
        inkscape:export-ydpi="38.769234">
       <g
-         id="g3783">
+         id="g3783"
+         inkscape:export-filename="/Users/nelvindriz/Workspace/Annovean/game-off-2012/game/Assets/Textures/entities/cell.png"
+         inkscape:export-xdpi="38.769234"
+         inkscape:export-ydpi="38.769234">
         <path
            sodipodi:type="arc"
            style="opacity:1;fill:url(#radialGradient3765);fill-opacity:1.0;fill-rule:evenodd;stroke:none"
@@ -149,7 +155,10 @@
          style="opacity:0.39224141;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
          d="m 100.01532,21.021129 -11.567833,11.939556 3.976935,0 7.590898,-7.843847 7.60667,7.843847 3.97694,0 -11.58361,-11.939556 z"
          id="path3787"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/nelvindriz/Workspace/Annovean/game-off-2012/game/Assets/Textures/entities/arrow.png"
+         inkscape:export-xdpi="38.769234"
+         inkscape:export-ydpi="38.769234" />
     </g>
   </g>
 </svg>
