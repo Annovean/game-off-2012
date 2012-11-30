@@ -10,15 +10,20 @@ function Start()
 {
     theScreenWidth = Screen.width;
     theScreenHeight = Screen.height;
+    
 }
 
 function OnCollisionEnter( collision : Collision )
 {
-    Debug.Log(collision.gameObject.name);
+    var object : GameObject = collision.gameObject;
+    if(object.name == "Enemy") {
+      Debug.Log("Enemy Collided");
+    }
 }
 
 function Update() 
 {
+    rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
     if (Input.GetKey("d") || Input.GetKey("right"))
     {
        transform.position.x += speed * Time.deltaTime;
