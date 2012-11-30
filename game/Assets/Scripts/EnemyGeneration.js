@@ -1,15 +1,29 @@
 #pragma strict
 
-public var maxEnemies:int = 10;
-private var enemy:GameObject;
+var enemyPrefabs : GameObject[]; 
+var amountEnemies : int = 20; 
+var yieldTimeMin : int = 2; 
+var yieldTimeMax : int = 5; 
 
-function Start () {
-  enemy = GameObject.Find('Enemy');
+function Start()
+{
+    Spawn();
 }
 
-function Update () {
-  var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-  if (enemies.length < maxEnemies) {
-	Instantiate(enemy, Vector2(Random.value * 1024, Random.value * 768), Quaternion.identity);
-  }
-}
+function Spawn() 
+{ 
+   for(var i:int = 0; i < amountEnemies; i++) {
+      yield WaitForSeconds(Random.Range(yieldTimeMin, yieldTimeMax));
+      var index : int = Random.Range(0, enemyPrefabs.length - 1);
+      if(index == enemyPrefabs.Length || index < 0) {
+        index = 0;
+      }
+      
+      try {
+        var obj : GameObject = enemyPrefabs[index];
+        var enemy : GameObject = Instantiate(obj, Vector3(0,0,0), Quaternion.identity);
+      } catch (exception) {
+        // Do Nothing
+      }
+   }
+}  
