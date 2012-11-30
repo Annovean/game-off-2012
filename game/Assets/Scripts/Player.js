@@ -1,7 +1,7 @@
 #pragma strict
 
 public var Boundary : int = 50;
-public var speed : int = 5;
+public var speed : int = 10;
 
 private var theScreenWidth : int;
 private var theScreenHeight : int;
@@ -14,7 +14,7 @@ function Start()
 
 function OnCollisionEnter( collision : Collision )
 {
-    Debug.Log("Player Collided");
+    Debug.Log(collision.gameObject.name);
 }
 
 function Update() 
