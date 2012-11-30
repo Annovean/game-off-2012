@@ -5,7 +5,7 @@ public var size : float = 1;
 private var player : Player;
 
 function Start () {
-  player = GameObject.Find('Player').GetComponent("Player");
+  player = GameObject.Find('Player').GetComponent(Player);
 }
 
 function Update () {
