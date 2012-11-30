@@ -12,6 +12,11 @@ function Start()
     theScreenHeight = Screen.height;
 }
 
+function OnCollisionEnter( collision : Collision )
+{
+    Debug.Log("Player Collided");
+}
+
 function Update() 
 {
     if (Input.GetKey("d") || Input.GetKey("right"))
